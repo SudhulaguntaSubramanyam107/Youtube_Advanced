@@ -1,5 +1,4 @@
 import { useSelector } from "react-redux";
-import store from "../utils/store";
 import { Link, useLocation } from "react-router-dom";
 
 const sections = [

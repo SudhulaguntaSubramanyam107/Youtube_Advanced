@@ -6,21 +6,17 @@ import CommentsContainer from "./CommentsContainer"
 import LiveChat from "./LiveChat"
 
 const Watchpage = () => {
-
   const dispatch = useDispatch()
   const [searchParams] = useSearchParams()
-
   const videoID = searchParams.get("v")
-
   const [likes, setLikes] = useState(0)
   const [dislikes, setDislikes] = useState(0)
-
   const [liked, setLiked] = useState(false)
   const [disliked, setDisliked] = useState(false)
 
   useEffect(()=>{
     dispatch(closeMenu())
-  },[])
+  },[dispatch])   // ✅ fixed here
 
   const handleLike = () => {
     if(!liked){
@@ -77,6 +73,7 @@ const Watchpage = () => {
             alt="like"/>
           <span className="text-lg font-bold">{likes}</span>
         </div>
+
         <div className="flex items-center gap-2 cursor-pointer" onClick={handleDislike}>
           <img
             className="h-12 w-12 p-2"
@@ -86,7 +83,6 @@ const Watchpage = () => {
         </div>
       </div>
       <CommentsContainer/>
-
     </div>
   )
 }

@@ -1,9 +1,6 @@
 import { useSelector } from "react-redux"
-import Buttonlist from "./ButtonList"
-import Manicontainer from "./Maincontainer"
 import Sidebar from "./Sidebar"
 import { Outlet } from "react-router-dom"
-import { isThemeDark } from "../utils/themeslice"
 
 const Body = ()=>{
     const isOpenMenu = useSelector(store=>store.app.isOpenMenu) 

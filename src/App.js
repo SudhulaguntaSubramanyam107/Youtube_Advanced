@@ -4,7 +4,7 @@ import Body from './components/Body';
 import store from './utils/store';
 import { Provider } from 'react-redux';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Manicontainer from './components/Maincontainer';
+import Maincontainer from './components/Maincontainer';
 import Watchpage from './components/Watchpage';
 import Courses from './components/Courses';
 import Sports from './components/Sports';
@@ -15,7 +15,7 @@ function App() {
     element : <Body/>,
     children : [{
       path: "/",
-      element : <Manicontainer/>
+      element : <Maincontainer/>
     },{
       path : "/watchpage",
       element : <Watchpage/> 

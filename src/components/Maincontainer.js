@@ -1,7 +1,7 @@
 import Buttonlist from "./ButtonList"
 import Videocontainer from "./VideoContainer"
 
-const Manicontainer = ()=>{
+const Maincontainer = ()=>{
     return (
         <div>
             <Buttonlist/>
@@ -9,4 +9,4 @@ const Manicontainer = ()=>{
         </div>
     )
 }
-export default Manicontainer
+export default Maincontainer
